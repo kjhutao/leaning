@@ -77,3 +77,69 @@
 //	return 0;
 //}
 
+//int main(void) {
+//	int a = 10;
+//	int b = a << 1;
+//	//左移就是二进制位整体左移，后边补零
+//
+//	printf("b = %d\n", b);
+//	printf("b = %d\n", a);
+//	return 0;
+//}
+//int main(void) {
+//	int a = -10;
+//	int b = a >> 1;
+//	//逻辑右移左边加0，右边丢掉
+//	//算术右移正数左边加0，负数左边加1，右边丢掉
+//
+//	printf("b = %d\n", a);
+//	printf("b = %d\n", b);
+//	return 0;
+//}
+
+//编写：求一个整数存储在内存中二进制中1的个数
+/*int countBitone(unsigned int n) {
+	int count = 0;
+	while (n) {
+		if ((n % 2) == 1) {
+			count++;
+		}
+		n = n / 2;
+	}
+	return count;
+	//优秀算法	
+}*/
+//int countBitone(int n) {
+//	int count = 0;
+//	while (n) {
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	return count;
+//}
+//
+//int main(void) {
+//	int num = 0;
+//	scanf_s("%d", &num);
+//	int ret = countBitone(num);
+//	printf("%d\n", ret);
+//
+//	return 0;
+//}
+
+//编写代码将13个二进制序列的第5位修改为1，然后在改回0
+
+int main(void) {
+	int a = 13;
+	//方法1
+	/*int n = 16;
+	a = a | n;*/
+	//方法2
+	int n = 5;
+	a = a | (1 << (n - 1));
+	
+	printf("%d\n", a);
+	a &= ~(a << (n - 1));
+	printf("%d\n", a);
+	return 0;
+}
