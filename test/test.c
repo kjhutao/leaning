@@ -129,17 +129,46 @@
 
 //编写代码将13个二进制序列的第5位修改为1，然后在改回0
 
-int main(void) {
-	int a = 13;
-	//方法1
-	/*int n = 16;
-	a = a | n;*/
-	//方法2
-	int n = 5;
-	a = a | (1 << (n - 1));
-	
-	printf("%d\n", a);
-	a &= ~(a << (n - 1));
-	printf("%d\n", a);
-	return 0;
-}
+//int main(void) {
+//	int a = 13;
+//	//方法1
+//	/*int n = 16;
+//	a = a | n;*/
+//	//方法2
+//	int n = 5;
+//	a = a | (1 << (n - 1));
+//	
+//	printf("%d\n", a);
+//	a &= ~(a << (n - 1));
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//int main(void) {
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	int d = 0;
+//	if (a = b + 1, c = a / 2, d > 0) {//if有逗号表达式的时候，看最后一个表达式满足条件（d > 0)
+//
+//	}
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	//a = get_val();
+//	//count_val(a);
+//	//while (a > 0) {
+//	//	//业务处理
+//	//	//......
+//	//	a = get_val();
+//	//	count_val(a);
+//	//}
+//	//上面伪代码太臃肿，改为以下逻辑
+//	while (a = aet_val(), count_val(a), a > 0) {
+//		//业务处理
+//		//........
+//	}
+//	return 0;
+//}
