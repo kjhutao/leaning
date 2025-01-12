@@ -172,3 +172,35 @@
 //	}
 //	return 0;
 //}
+//int main(void) {
+//	int arr[10] = { 1, 2, 3, 4, 5 };//这里这个[]不是操作符，只作为定义
+//	int m = arr[4];//数组中下标是4的元素
+//	//[] 下标引用操作符， 操作数是；arr, 4
+//	printf("%d\n", m);//（）是函数调用操作符
+//
+//	return 0;
+//}
+
+//结构体用于描述复杂对象,一些值的集合
+//学生类型定义
+//struct Student {
+//	//member-list成员列表
+//	char name[20];
+//	int age;
+//	float score;
+//}s1, s2, s3;//s1,s2,s3结构体变量列表
+//int main(void) {
+//	int a;
+//	struct Student lisi = { "李四",20,99.0 };//初始化
+//	struct Student xiaoming;//xiaoming就是一个Student结构体类型的对象
+//	printf("%s\n", lisi.name);//结构体变量.结构体成员：“.”是成员访问符
+//	return 0;
+//}
+int main(void) {
+	int a = 5;
+	int b = 5;
+	printf("%d\n", ++a);
+	printf("%d\n", b++);
+
+	return 0;
+	}
