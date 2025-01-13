@@ -196,11 +196,20 @@
 //	printf("%s\n", lisi.name);//结构体变量.结构体成员：“.”是成员访问符
 //	return 0;
 //}
+//int main(void) {
+//	int a = 5;
+//	int b = 5;
+//	printf("%d\n", ++a);
+//	printf("%d\n", b++);
+//
+//	return 0;
+//	}
+
 int main(void) {
-	int a = 5;
-	int b = 5;
-	printf("%d\n", ++a);
-	printf("%d\n", b++);
+	char a = 20;
+	char b = 130;
+	char c = a + b;
+	printf("%d\n", c);
 
 	return 0;
-	}
+}
