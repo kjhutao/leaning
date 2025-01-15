@@ -14,9 +14,10 @@
 //排雷数组的显示
 #define SHOWMINE  '*'
 
+
 //打印游戏菜单
 void printMenu();
 //游戏实现
 void game();
 //初始化游戏场景
-void initScene();
+void initScene(char mine[ROWS][COLUMNS], int rows, int column, char set);

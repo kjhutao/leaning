@@ -1,11 +1,2 @@
 ﻿  game.c
-  saolei.c
-  正在生成代码...
-D:\leaning\saolei\game.c(12,6): error C2371: “initScene”: 重定义；不同的基类型
-      D:\leaning\saolei\saolei.h(22,1):
-      参见“initScene”的声明
-  
-D:\leaning\saolei\game.c(16,7): error C2374: “mine”: 重定义；多次初始化
-      D:\leaning\saolei\game.c(14,7):
-      参见“mine”的声明
-  
+  saolei.vcxproj -> D:\leaning\saolei\x64\Debug\saolei.exe
