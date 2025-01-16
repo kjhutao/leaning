@@ -21,3 +21,5 @@ void printMenu();
 void game();
 //初始化游戏场景
 void initScene(char mine[ROWS][COLUMNS], int rows, int column, char set);
+//显示场景
+void showScene(char mine[ROWS][COLUMNS], int row, int column);
