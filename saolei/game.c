@@ -40,10 +40,27 @@ void showScene(char mine[ROWS][COLUMNS], int row, int column) {
 	}
 
 }
+//设置雷
+void setMine(char mine[ROW][COLUMNS], int row, int column, char set) {
+	int x = 0;
+	int y = 0;
+	int count = MINENUM;
+	while (count) {
+		x = rand() % 9;
+		y = rand() % 9;
+		if (mine[x][y] != '1') {
+			mine[x][y] = '1';
+			count--;
+		}
+
+	}
+}
 
 //游戏实现
 void game(){
-	
+	//随机数种子
+	srand((unsigned)time(NULL));
+
 	//存放雷的数组
 	char mine[ROWS][COLUMNS] = { SETMINE };
 	//显示排雷的数组
@@ -56,4 +73,7 @@ void game(){
 	initScene(showMine, ROWS, COLUMNS, '*');
 	//显示场景
 	showScene(showMine, ROW, COLUMN);
+	//设置雷
+	setMine(mine, ROW, COLUMN, '1');
+	//showScene(mine, ROW, COLUMN);
 }

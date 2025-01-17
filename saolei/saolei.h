@@ -13,6 +13,8 @@
 #define SETMINE  '0'
 //排雷数组的显示
 #define SHOWMINE  '*'
+//雷的个数
+#define MINENUM 10
 
 
 //打印游戏菜单
@@ -23,3 +25,5 @@ void game();
 void initScene(char mine[ROWS][COLUMNS], int rows, int column, char set);
 //显示场景
 void showScene(char mine[ROWS][COLUMNS], int row, int column);
+//设置雷
+void setMine(char mine[ROW][COLUMNS], int row, int column, char set);
