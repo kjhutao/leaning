@@ -56,6 +56,36 @@ void setMine(char mine[ROW][COLUMNS], int row, int column, char set) {
 	}
 }
 
+int mineCount(char mine) {
+	int count = 0;
+	int i = 0;
+	for (i = -1; i <= 1; i++) {
+		int j = 0;
+		for (j = -1; j <= 1; j++) {
+			
+		}
+	}
+}
+//排查雷
+void findMine(char mine[ROWS][COLUMNS], char showMine[ROWS][COLUMNS], int row, int column) {
+	
+	while (1) {
+		int x = 0;
+		int y = 0;
+		printf("请输入你排查的坐标：");
+		scanf_s("%d%d", &x, &y);
+		if (mine[x][y] == '1') {
+			printf("你踩到雷了，游戏结束！\n");
+			break;
+		}
+		else {
+			showMine[x][y] = mineCount(mine);
+		}
+	}
+	
+
+}
+
 //游戏实现
 void game(){
 	//随机数种子
@@ -76,4 +106,6 @@ void game(){
 	//设置雷
 	setMine(mine, ROW, COLUMN, '1');
 	//showScene(mine, ROW, COLUMN);
+	//排查雷
+	findMine(mine, showMine, ROW, COLUMN);
 }

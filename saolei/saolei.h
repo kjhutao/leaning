@@ -27,3 +27,5 @@ void initScene(char mine[ROWS][COLUMNS], int rows, int column, char set);
 void showScene(char mine[ROWS][COLUMNS], int row, int column);
 //…Ë÷√¿◊
 void setMine(char mine[ROW][COLUMNS], int row, int column, char set);
+//≈≈≤È¿◊
+void findMine(char mine[ROWS][COLUMNS], char showMine[ROWS][COLUMNS], int row, int column);
