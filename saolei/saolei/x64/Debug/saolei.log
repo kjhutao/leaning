@@ -1,3 +1,2 @@
 ﻿  game.c
-D:\leaning\saolei\game.c(62,18): warning C4013: “time”未定义；假设外部返回 int
-  saolei.vcxproj -> D:\leaning\saolei\x64\Debug\saolei.exe
+  saolei.vcxproj -> E:\leaning\saolei\x64\Debug\saolei.exe

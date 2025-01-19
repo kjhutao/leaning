@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\leaning\\saolei\\",
+  "WorkspaceRootPath": "E:\\leaning\\saolei\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|D:\\leaning\\saolei\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|E:\\leaning\\saolei\\game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|solutionrelative:game.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|D:\\leaning\\saolei\\saolei.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|solutionrelative:saolei.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|E:\\leaning\\saolei\\saolei.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|solutionrelative:saolei.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|D:\\leaning\\saolei\\saolei.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|solutionrelative:saolei.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|E:\\leaning\\saolei\\saolei.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{95191D3E-443E-486D-ABF5-3C481580DD66}|saolei.vcxproj|solutionrelative:saolei.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "saolei.h",
-              "DocumentMoniker": "D:\\leaning\\saolei\\saolei.h",
+              "DocumentMoniker": "E:\\leaning\\saolei\\saolei.h",
               "RelativeDocumentMoniker": "saolei.h",
-              "ToolTip": "D:\\leaning\\saolei\\saolei.h",
+              "ToolTip": "E:\\leaning\\saolei\\saolei.h",
               "RelativeToolTip": "saolei.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvx4AAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-14T11:58:36.299Z",
               "IsPinned": true,
@@ -42,11 +42,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "game.c",
-              "DocumentMoniker": "D:\\leaning\\saolei\\game.c",
+              "DocumentMoniker": "E:\\leaning\\saolei\\game.c",
               "RelativeDocumentMoniker": "game.c",
-              "ToolTip": "D:\\leaning\\saolei\\game.c",
+              "ToolTip": "E:\\leaning\\saolei\\game.c",
               "RelativeToolTip": "game.c",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAD0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAFIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-14T11:59:07.051Z",
               "IsPinned": true,
@@ -54,15 +54,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "saolei.c",
-              "DocumentMoniker": "D:\\leaning\\saolei\\saolei.c",
+              "DocumentMoniker": "E:\\leaning\\saolei\\saolei.c",
               "RelativeDocumentMoniker": "saolei.c",
-              "ToolTip": "D:\\leaning\\saolei\\saolei.c",
+              "ToolTip": "E:\\leaning\\saolei\\saolei.c",
               "RelativeToolTip": "saolei.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-01-14T11:54:49.472Z"
+              "WhenOpened": "2025-01-14T11:54:49.472Z",
+              "EditorCaption": ""
             }
           ]
         }

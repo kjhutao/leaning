@@ -19,6 +19,7 @@ int main(void) {
 			break;
 		default:
 			printf("你的输入有误，请输入0或者1\n");
+			break;
 		}
 	} while (input);
 

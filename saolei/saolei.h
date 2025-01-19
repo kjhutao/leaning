@@ -1,6 +1,7 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 
 //行列
 #define ROW 9
@@ -15,6 +16,7 @@
 #define SHOWMINE  '*'
 //雷的个数
 #define MINENUM 10
+
 
 
 //打印游戏菜单

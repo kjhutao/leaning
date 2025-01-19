@@ -30,10 +30,10 @@ void showScene(char mine[ROWS][COLUMNS], int row, int column) {
 		printf("%d ", i);
 	}
 	printf("\n");
-	for (i = 0; i < row; i++) {
+	for (i = 1; i <= row; i++) {
 		int j = 0;
 		printf("%d ", i + 1);
-		for (j = 0; j < column; j++) {
+		for (j = 1; j <= column; j++) {
 			printf("%c ", mine[i][j]);
 		}
 		printf("\n");
@@ -56,33 +56,45 @@ void setMine(char mine[ROW][COLUMNS], int row, int column, char set) {
 	}
 }
 
-int mineCount(char mine) {
+int mineCount(char mine[ROWS][COLUMNS], int x, int y) {
 	int count = 0;
 	int i = 0;
 	for (i = -1; i <= 1; i++) {
 		int j = 0;
 		for (j = -1; j <= 1; j++) {
-			
+			count += (mine[x + i][y + j] - '0');
 		}
 	}
+	return count;
 }
 //排查雷
 void findMine(char mine[ROWS][COLUMNS], char showMine[ROWS][COLUMNS], int row, int column) {
-	
-	while (1) {
-		int x = 0;
-		int y = 0;
+	int x = 0;
+	int y = 0;
+	int win = 0;//判断是否胜利
+	while (win < row * column - MINENUM) {
+		
 		printf("请输入你排查的坐标：");
 		scanf_s("%d%d", &x, &y);
-		if (mine[x][y] == '1') {
-			printf("你踩到雷了，游戏结束！\n");
-			break;
+		if (x > 0 && x < ROWS && y > 0 && y < COLUMNS) {
+			if (mine[x][y] == '1') {
+				printf("你踩到雷了，游戏结束！\n");
+				showScene(mine, ROW, COLUMN);
+				break;
+			}
+			else {
+				showMine[x][y] = (mineCount(mine, x, y) + '0');
+				//显示场景
+				showScene(showMine, ROW, COLUMN);
+			}
 		}
 		else {
-			showMine[x][y] = mineCount(mine);
+			printf("输入坐标有误，请重新输入！\n");
 		}
 	}
-	
+	if (win == row * column - MINENUM) {
+		printf("恭喜你，排雷成功！\n");
+	}
 
 }
 
@@ -108,4 +120,5 @@ void game(){
 	//showScene(mine, ROW, COLUMN);
 	//排查雷
 	findMine(mine, showMine, ROW, COLUMN);
+
 }
