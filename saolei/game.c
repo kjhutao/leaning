@@ -7,7 +7,7 @@ void printMenu(){
 	printf("**********  1.game  **********\n");
 	printf("**********  0.exit  **********\n");
 	printf("******************************\n");
-	printf(":");
+	printf("请选择:");
 }
 
 //初始化游戏场景
@@ -32,7 +32,7 @@ void showScene(char mine[ROWS][COLUMNS], int row, int column) {
 	printf("\n");
 	for (i = 1; i <= row; i++) {
 		int j = 0;
-		printf("%d ", i + 1);
+		printf("%d ", i);
 		for (j = 1; j <= column; j++) {
 			printf("%c ", mine[i][j]);
 		}
@@ -80,6 +80,7 @@ void findMine(char mine[ROWS][COLUMNS], char showMine[ROWS][COLUMNS], int row, i
 			if (mine[x][y] == '1') {
 				printf("你踩到雷了，游戏结束！\n");
 				showScene(mine, ROW, COLUMN);
+				system("pause");
 				break;
 			}
 			else {
