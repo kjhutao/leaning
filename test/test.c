@@ -205,11 +205,26 @@
 //	return 0;
 //	}
 
+//int main(void) {
+//	char a = 20;
+//	char b = 130;
+//	char c = a + b;
+//	printf("%d\n", c);
+//
+//	return 0;
+//}
+
 int main(void) {
-	char a = 20;
-	char b = 130;
-	char c = a + b;
-	printf("%d\n", c);
+	int n = 10;
+	int m = 100;
+	//const 修饰指针变量
+	//放在*的右边，限制的是指针变量本身，指针不能改变它的指向
+	//放在*的左边，限制的是不能修改指针所指向的变量解应用的值
+	//int* const p = &n;
+	int const* p = &n;
+
+	*p = 20;
+	p = &m;
 
 	return 0;
 }
