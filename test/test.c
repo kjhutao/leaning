@@ -214,17 +214,65 @@
 //	return 0;
 //}
 
-int main(void) {
-	int n = 10;
-	int m = 100;
-	//const 修饰指针变量
-	//放在*的右边，限制的是指针变量本身，指针不能改变它的指向
-	//放在*的左边，限制的是不能修改指针所指向的变量解应用的值
-	//int* const p = &n;
-	int const* p = &n;
+//int main(void) {
+//	int n = 10;
+//	int m = 100;
+//	//const 修饰指针变量
+//	//放在*的右边，限制的是指针变量本身，指针不能改变它的指向
+//	//放在*的左边，限制的是不能修改指针所指向的变量解应用的值
+//	//int* const p = &n;
+//	int const* p = &n;
+//
+//	*p = 20;
+//	p = &m;
+//
+//	return 0;
+//
 
-	*p = 20;
-	p = &m;
+//int main(void) {
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int i = 0;
+//	for (i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	int* p = &arr[0];
+//	for (i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+//		printf("%d ", *(p + i));
+//	}
+//	return 0;
+//}
 
-	return 0;
-}
+//int main(void) {
+//	//指针减去指针，得到的是两个指针之间的元素个数
+//	//两个指针相减，计算的前提是在同一块内存空间
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	printf("%d\n", &arr[9] - &arr[1]);
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", sz);
+//	int* p = arr;
+//	while (p < arr + sz) {
+//		printf("%d ", *p);
+//		p++;
+//	}	
+//	return 0;
+//}
+
+//int main(void) {
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("%d\n", sz);
+//	int* p = &arr[0];//错误写法
+//	while (p < arr + sz) {
+//		printf("%d ", *p);
+//		p++;
+//	}
+//	return 0;
+//}
+
