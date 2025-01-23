@@ -276,3 +276,52 @@
 //	return 0;
 //}
 
+//#include<assert.h>
+//int main(void) {
+//	int a = 10;
+//	int* p = &a;
+//	int* p2 = &a;
+//	assert(p2 != NULL);
+//
+//	//空指针
+//
+//	return 0;
+//}
+
+//#include<assert.h>
+////计算字符串长度
+//size_t my_strlen( const char* str) {
+//	//const 用来提升代码的安全性,用户不能通过str修改字符串
+//	
+//	size_t count = 0;
+//	assert(str != NULL);
+//	//assert 断言，如果括号内的表达式为假，程序会终止
+//	while (*str) {
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+//int main(void) {
+//	char arr[] = "abcdef";
+//	size_t len = my_strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
+void Swap1(int x, int y) {
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+int main(void) {
+	int a = 0;
+	int b = 0;
+	scanf_s("%d %d", &a, &b);
+	//交换两个数
+	printf("交换前：a = %d b = %d\n", a, b);
+	Swap1(a, b);
+	printf("交换后：a = %d b = %d\n", a, b);
+
+	return 0;
+}
