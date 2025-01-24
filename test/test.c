@@ -308,20 +308,73 @@
 //	printf("%d\n", len);
 //	return 0;
 //}
-void Swap1(int x, int y) {
-	int temp = x;
-	x = y;
-	y = temp;
-}
+//void Swap1(int x, int y) {
+//	int temp = x;
+//	x = y;
+//	y = temp;
+//}
+//
+//int main(void) {
+//	int a = 0;
+//	int b = 0;
+//	scanf_s("%d %d", &a, &b);
+//	//交换两个数
+//	printf("交换前：a = %d b = %d\n", a, b);
+//	Swap1(a, b);
+//	printf("交换后：a = %d b = %d\n", a, b);
+//
+//	return 0;
+//}
+//int main(void) {
+//	int n = 10;
+//	int m = 100;
+//	//const 修饰指针变量
+//	//放在*的右边，限制的是指针变量本身，指针不能改变它的指向
+//	//放在*的左边，限制的是不能修改指针所指向的变量解应用的值
+//	//int* const p = &n;
+//	int const* p = &n;
+//
+//	*p = 20;
+//	p = &m;
+//
+//	return 0;
+//}
+
+//int main(void) {
+//
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	//int* p = &arr[0];
+//	printf("&arr[0] = %p\n", &arr[0]);
+//	printf("&arr[0] = %p\n", &arr[0] + 1);
+//	printf("arr = %p\n", arr);
+//	printf("arr = %p\n", arr + 1);
+//	//数组名就是数组首元素的地址
+//	//但是有二个例外
+//	//1.sizeof(数组名）
+//	//这里表示的是计算整个数组的大小，单位是字节
+//	//2.&数组名
+//	//这里的数组名也表示整个数组，取出的是整个数组的地址
+//	//除此之外，所有的数组名都是数组首元素的地址
+//	//指针类型决定了指针的差异
+//	printf("&arr = %p\n", &arr);
+//	printf("&arr = %p\n", &arr + 1);
+//
+//	return 0;
+//}
 
 int main(void) {
-	int a = 0;
-	int b = 0;
-	scanf_s("%d %d", &a, &b);
-	//交换两个数
-	printf("交换前：a = %d b = %d\n", a, b);
-	Swap1(a, b);
-	printf("交换后：a = %d b = %d\n", a, b);
 
+	int arr[10] = { 0 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	int* p = &arr[0];
+	for (i = 0; i < sz; i++) {
+		scanf_s("%d", p + i);
+		//scanf_s("%d", arr + i);
+	}
+	for (i = 0; i < sz; i++) {
+		printf("%d ", *(p + i));//*p + i相当于先解引用后在+i.这中写法是错误的。
+		//printf("%d ", *(arr + i)); *(arr + i) <==> arr[i]
+	}
 	return 0;
 }
