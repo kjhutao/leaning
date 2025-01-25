@@ -308,7 +308,7 @@
 //	printf("%d\n", len);
 //	return 0;
 //}
-//void Swap1(int x, int y) {
+// void Swap1(int x, int y) {
 //	int temp = x;
 //	x = y;
 //	y = temp;
@@ -362,19 +362,35 @@
 //	return 0;
 //}
 
-int main(void) {
+//int main(void) {
+//
+//	int arr[10] = { 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int i = 0;
+//	int* p = &arr[0];
+//	for (i = 0; i < sz; i++) {
+//		scanf_s("%d", p + i);
+//		//scanf_s("%d", arr + i);
+//	}
+//	for (i = 0; i < sz; i++) {
+//		printf("%d ", *(p + i));//*p + i相当于先解引用后在+i.这中写法是错误的。
+//		//printf("%d ", *(arr + i)); *(arr + i) <==> arr[i]
+//      //arr[i] <==> i[arr]
+//		//[] 仅仅是个操作符 在编译器底层就是转换成指针来用的
+//	}
+//	return 0;
+//}
+void test(int arr[10]) {
+	int sz2 = sizeof(arr) / sizeof(arr[0]);
+	printf("sz2 = %d\n", sz2);
+}
 
-	int arr[10] = { 0 };
+int main(void) {
+		
+	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	int sz = sizeof(arr) / sizeof(arr[0]);
-	int i = 0;
-	int* p = &arr[0];
-	for (i = 0; i < sz; i++) {
-		scanf_s("%d", p + i);
-		//scanf_s("%d", arr + i);
-	}
-	for (i = 0; i < sz; i++) {
-		printf("%d ", *(p + i));//*p + i相当于先解引用后在+i.这中写法是错误的。
-		//printf("%d ", *(arr + i)); *(arr + i) <==> arr[i]
-	}
+	printf("sz = %d\n", sz);
+	test(arr);//arr是数组名，数组名表示首元素的地址
+
 	return 0;
 }
