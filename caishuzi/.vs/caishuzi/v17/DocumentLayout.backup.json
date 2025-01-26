@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\leaning\\caishuzi\\caishuzi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0291CD-05F1-4D52-8053-7DD13AE98803}|caishuzi.vcxproj|D:\\leaning\\caishuzi\\caishuzi\\caishuzi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0F0291CD-05F1-4D52-8053-7DD13AE98803}|caishuzi.vcxproj|solutionrelative:caishuzi.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "caishuzi.c",
+              "DocumentMoniker": "D:\\leaning\\caishuzi\\caishuzi\\caishuzi.c",
+              "RelativeDocumentMoniker": "caishuzi.c",
+              "ToolTip": "D:\\leaning\\caishuzi\\caishuzi\\caishuzi.c*",
+              "RelativeToolTip": "caishuzi.c*",
+              "ViewState": "AgIAABQAAAAAAAAAAAAvwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-01-26T11:00:38.929Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
