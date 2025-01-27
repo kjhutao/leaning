@@ -380,17 +380,60 @@
 //	}
 //	return 0;
 //}
-void test(int arr[10]) {
-	int sz2 = sizeof(arr) / sizeof(arr[0]);
-	printf("sz2 = %d\n", sz2);
-}
+//void test(int arr[10]) {
+//	int sz2 = sizeof(arr) / sizeof(arr[0]);
+//	printf("sz2 = %d\n", sz2);
+//}
+//
+//int main(void) {
+//		
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("sz = %d\n", sz);
+//	test(arr);//arr是数组名，数组名表示首元素的地址
+//
+//	return 0;
+//}
 
+//int main()
+//{
+//	int a = 0, b = 0;
+//	for (a = 1, b = 1; a <= 100; a++)
+//	{
+//		if (b >= 20) break;
+//		if (b % 3 == 1)
+//		{
+//			b = b + 3;
+//			continue;
+//		}
+//		b = b - 5;
+//	}
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+////求最大值
+//int main(void) {
+//	int num[10] = { 0 };
+//	printf_s("请输入10个数：");
+//	int i = 0;
+//	int len = (sizeof(num) / sizeof(num[0]));
+//	for (i = 0; i < len; i++) {
+//		scanf_s("%d", &num[i]);
+//	}
+//	int max = 0;
+//	for (i = 0; i < len; i++) {
+//		if (num[i] > max) {
+//			max = num[i];
+//		}
+//	}
+//	printf("你输入的数字中，最大的数是%d\n", max);
+//
+//	return 0;
+//}
+
+//分数求和
 int main(void) {
-		
-	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	printf("sz = %d\n", sz);
-	test(arr);//arr是数组名，数组名表示首元素的地址
 
-	return 0;
+
 }
