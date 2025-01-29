@@ -489,3 +489,42 @@
 //
 //	return 0;
 //}
+
+//冒泡排序
+void input(int* arr, int sz) {
+	int i = 0;
+	for (i = 0; i < sz; i++) {
+		scanf("%d", arr + i);
+	}
+}
+void bubble_sort(int* arr, int sz) {
+	int i = 0;
+	for (i = 0; i < sz - 1; i++) {
+		int j = 0;
+		for (j = 0; j < sz - i - 1; j++) {
+			int temp = 0;
+			if (arr[j] > arr[j + 1]) {
+				temp = arr[j ];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+
+}
+
+int main(void) {
+	int arr[10] = {0};
+	//输入一些值
+	//排序--写一个函数完成数组的排序，排成升序
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	input(arr, sz);
+	//排序
+	bubble_sort(arr, sz);
+	int i = 0;
+	for (i = 0; i < sz; i++) {
+		printf_s("%d ", arr[i]);
+	}
+	printf_s("\n");
+	return 0;
+}
