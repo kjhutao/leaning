@@ -489,42 +489,59 @@
 //
 //	return 0;
 //}
+////冒泡排序
+//void input(int* arr, int sz) {
+//    int i = 0;
+//    for (i = 0; i < sz; i++) {
+//        if (scanf_s("%d", arr + i) != 1) {
+//            printf("输入错误，请输入一个整数。\n");
+//            i--; // 重新输入当前元素
+//            while (getchar() != '\n'); // 清空输入缓冲区
+//        }
+//    }
+//}
+//void bubble_sort(int* arr, int sz) {
+//	int i = 0;
+//	for (i = 0; i < sz - 1; i++) {
+//		int flag = 1;//假设有序
+//		int j = 0;
+//		for (j = 0; j < sz - i - 1; j++) {
+//			int temp = 0;
+//			if (arr[j] > arr[j + 1]) {
+//				flag = 0;//有交换，无序
+//				temp = arr[j ];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = temp;
+//			}
+//		}
+//		if (flag == 1) {
+//			break;
+//		}
+//	}
+//
+//}
+//
+//int main(void) {
+//	int arr[10] = {0};
+//	//输入一些值
+//	//排序--写一个函数完成数组的排序，排成升序
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	input(arr, sz);
+//	//排序
+//	bubble_sort(arr, sz);
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf_s("%d ", arr[i]);
+//	}
+//	printf_s("\n");
+//	return 0;
+//}
 
-//冒泡排序
-void input(int* arr, int sz) {
-	int i = 0;
-	for (i = 0; i < sz; i++) {
-		scanf("%d", arr + i);
-	}
-}
-void bubble_sort(int* arr, int sz) {
-	int i = 0;
-	for (i = 0; i < sz - 1; i++) {
-		int j = 0;
-		for (j = 0; j < sz - i - 1; j++) {
-			int temp = 0;
-			if (arr[j] > arr[j + 1]) {
-				temp = arr[j ];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-
-}
-
+//二级指针
 int main(void) {
-	int arr[10] = {0};
-	//输入一些值
-	//排序--写一个函数完成数组的排序，排成升序
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	input(arr, sz);
-	//排序
-	bubble_sort(arr, sz);
-	int i = 0;
-	for (i = 0; i < sz; i++) {
-		printf_s("%d ", arr[i]);
-	}
-	printf_s("\n");
+	int a = 10;
+	int* pa = &a;//pa是一个指针，指向一个整型变量
+	int** ppa = &pa; //ppa是一个指针，指向一个指针
+
 	return 0;
 }
