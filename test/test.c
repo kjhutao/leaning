@@ -537,11 +537,106 @@
 //	return 0;
 //}
 
-//二级指针
+////二级指针
+//int main(void) {
+//	int a = 10;
+//	int* pa = &a;//pa是一个指针，指向一个整型变量
+//	int** ppa = &pa; //ppa是一个指针，指向一个指针
+//
+//	return 0;
+//}
+
+//三子棋
+#include<stdbool.h>
+
+#define SIZE 3
+
+char board[SIZE][SIZE] = { 0 };
+bool gameOver = false;
+
+void initializeBoard() {
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < SIZE; i++) {
+		for (j = 0; j < SIZE; j++) {
+			board[i][j] = ' ';
+		}
+	}
+}
+void printBoard() {
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < SIZE; i++) {
+		for (j = 0; j < SIZE; j++) {
+			printf_s(" %c ", board[i][j]);
+			if (j < SIZE - 1) {
+				printf_s("|");
+			}
+		}
+		printf_s("\n");
+		if (i < SIZE - 1) {
+			printf_s("---|---|---\n");
+		}
+	}
+}
+void playerMove() {
+	int x = 0;
+	int y = 0;
+	printf_s("请输入坐标：");
+	scanf_s("%d %d", &x, &y);
+	if (x >= 0 && x < SIZE && y >= 0 && y < SIZE && board[x][y] == ' ') {
+		board[x][y] = 'X';
+	}
+	else {
+		printf_s("输入错误，请重新输入。\n");
+		playerMove();
+	}
+}
+void computerMove() {
+	int x = 0;
+	int y = 0;
+	do {
+		x = rand() % SIZE;
+		y = rand() % SIZE;
+	} while (board[x][y] != ' ');
+	board[x][y] = 'O';
+}
+bool isFull() {
+	int i = 0;
+	int j = 0;
+	for (i = 0; i < SIZE; i++) {
+		for (j = 0; j < SIZE; j++) {
+			if (board[i][j] == ' ') {
+				return false;
+			}
+		}
+	}
+	return true;
+}
+char checkWin() {
+	int i = 0;
+	for (i = 0; i < SIZE; i++) {
+		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') {
+			return board[i][0];
+		}
+	}
+	for (i = 0; i < SIZE; i++) {
+		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ') {
+			return board[0][i];
+		}
+	}
+	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
+		return board[0][0];
+	}
+	if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
+		return board[0][2];
+	}
+	if (isFull()) {
+		return 'Q';
+	}
+	return ' ';
+}
 int main(void) {
-	int a = 10;
-	int* pa = &a;//pa是一个指针，指向一个整型变量
-	int** ppa = &pa; //ppa是一个指针，指向一个指针
 
 	return 0;
 }
