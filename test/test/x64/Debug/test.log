@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\leaning\test\test.c(599,7): warning C4013: “rand”未定义；假设外部返回 int
   test.vcxproj -> D:\leaning\test\x64\Debug\test.exe

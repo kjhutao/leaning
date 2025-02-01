@@ -546,97 +546,132 @@
 //	return 0;
 //}
 
-//三子棋
-#include<stdbool.h>
+////三子棋
+//#include<stdbool.h>
+//
+//#define SIZE 3
+//
+//char board[SIZE][SIZE] = { 0 };
+//bool gameOver = false;
+//
+//void initializeBoard() {
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < SIZE; i++) {
+//		for (j = 0; j < SIZE; j++) {
+//			board[i][j] = ' ';
+//		}
+//	}
+//}
+//void printBoard() {
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < SIZE; i++) {
+//		for (j = 0; j < SIZE; j++) {
+//			printf_s(" %c ", board[i][j]);
+//			if (j < SIZE - 1) {
+//				printf_s("|");
+//			}
+//		}
+//		printf_s("\n");
+//		if (i < SIZE - 1) {
+//			printf_s("---|---|---\n");
+//		}
+//	}
+//}
+//void playerMove() {
+//	int x = 0;
+//	int y = 0;
+//	printf_s("请输入坐标：");
+//	scanf_s("%d %d", &x, &y);
+//	if (x >= 0 && x < SIZE && y >= 0 && y < SIZE && board[x][y] == ' ') {
+//		board[x][y] = 'X';
+//	}
+//	else {
+//		printf_s("输入错误，请重新输入。\n");
+//		playerMove();
+//	}
+//}
+//void computerMove() {
+//	int x = 0;
+//	int y = 0;
+//	do {
+//		x = rand() % SIZE;
+//		y = rand() % SIZE;
+//	} while (board[x][y] != ' ');
+//	board[x][y] = 'O';
+//}
+//bool isFull() {
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < SIZE; i++) {
+//		for (j = 0; j < SIZE; j++) {
+//			if (board[i][j] == ' ') {
+//				return false;
+//			}
+//		}
+//	}
+//	return true;
+//}
+//char checkWin() {
+//	int i = 0;
+//	for (i = 0; i < SIZE; i++) {
+//		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') {
+//			return board[i][0];
+//		}
+//	}
+//	for (i = 0; i < SIZE; i++) {
+//		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ') {
+//			return board[0][i];
+//		}
+//	}
+//	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
+//		return board[0][0];
+//	}
+//	if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
+//		return board[0][2];
+//	}
+//	if (isFull()) {
+//		return 'Q';
+//	}
+//	return ' ';
+//}
+//int main(void) {
+//
+//	return 0;
+//}
 
-#define SIZE 3
+////指针数组
+//int main(void) {
+//	//指针数组就是存放指针的数组，每个元素就是指针类型
+//	int a = 10;
+//	int b = 20;
+//	int c = 30;
+//	/*int* pa = &a;
+//	int* pb = &b;
+//	int* pc = &c;*/
+//	int* arr[3] = { &a, &b, &c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++) {
+//		printf("%d ", *(arr[i]));
+//	}
+//	return 0;
+//}
 
-char board[SIZE][SIZE] = { 0 };
-bool gameOver = false;
-
-void initializeBoard() {
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < SIZE; i++) {
-		for (j = 0; j < SIZE; j++) {
-			board[i][j] = ' ';
-		}
-	}
-}
-void printBoard() {
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < SIZE; i++) {
-		for (j = 0; j < SIZE; j++) {
-			printf_s(" %c ", board[i][j]);
-			if (j < SIZE - 1) {
-				printf_s("|");
-			}
-		}
-		printf_s("\n");
-		if (i < SIZE - 1) {
-			printf_s("---|---|---\n");
-		}
-	}
-}
-void playerMove() {
-	int x = 0;
-	int y = 0;
-	printf_s("请输入坐标：");
-	scanf_s("%d %d", &x, &y);
-	if (x >= 0 && x < SIZE && y >= 0 && y < SIZE && board[x][y] == ' ') {
-		board[x][y] = 'X';
-	}
-	else {
-		printf_s("输入错误，请重新输入。\n");
-		playerMove();
-	}
-}
-void computerMove() {
-	int x = 0;
-	int y = 0;
-	do {
-		x = rand() % SIZE;
-		y = rand() % SIZE;
-	} while (board[x][y] != ' ');
-	board[x][y] = 'O';
-}
-bool isFull() {
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < SIZE; i++) {
-		for (j = 0; j < SIZE; j++) {
-			if (board[i][j] == ' ') {
-				return false;
-			}
-		}
-	}
-	return true;
-}
-char checkWin() {
-	int i = 0;
-	for (i = 0; i < SIZE; i++) {
-		if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') {
-			return board[i][0];
-		}
-	}
-	for (i = 0; i < SIZE; i++) {
-		if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != ' ') {
-			return board[0][i];
-		}
-	}
-	if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != ' ') {
-		return board[0][0];
-	}
-	if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != ' ') {
-		return board[0][2];
-	}
-	if (isFull()) {
-		return 'Q';
-	}
-	return ' ';
-}
+////指针数组模拟二维数组
 int main(void) {
-
+	int arr1[5] = { 1, 2, 3, 4, 5 };
+	int arr2[5] = { 6, 7, 8, 9, 10 };
+	int arr3[5] = { 11, 12, 13, 14, 15 };
+	int* arr[] = { arr1, arr2, arr3 };
+	int i = 0;
+	for (i = 0; i < 3; i++) {
+		int j = 0;
+		for (j = 0; j < 5; j++) {
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	
+	}
 	return 0;
 }
