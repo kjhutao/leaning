@@ -659,19 +659,40 @@
 //}
 
 ////指针数组模拟二维数组
+//int main(void) {
+//	int arr1[5] = { 1, 2, 3, 4, 5 };
+//	int arr2[5] = { 6, 7, 8, 9, 10 };
+//	int arr3[5] = { 11, 12, 13, 14, 15 };
+//	int* arr[] = { arr1, arr2, arr3 };
+//	int i = 0;
+//	for (i = 0; i < 3; i++) {
+//		int j = 0;
+//		for (j = 0; j < 5; j++) {
+//			printf("%d ", arr[i][j]);//*(*(arr+i)+j)
+//		}
+//		printf("\n");
+//	
+//	}
+//	return 0;
+//}
+
+//int main(void) {
+//	char ch = 'w';
+//	char ch1 = 'c';
+//	char const* pc = &ch;
+//	//char * const pc = &ch;
+//	//*pc = 'b';
+//	pc = &ch1;
+//
+//	printf("%c\n", *pc);
+//
+//	return 0;
+//}
+
 int main(void) {
-	int arr1[5] = { 1, 2, 3, 4, 5 };
-	int arr2[5] = { 6, 7, 8, 9, 10 };
-	int arr3[5] = { 11, 12, 13, 14, 15 };
-	int* arr[] = { arr1, arr2, arr3 };
-	int i = 0;
-	for (i = 0; i < 3; i++) {
-		int j = 0;
-		for (j = 0; j < 5; j++) {
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	
-	}
+	//char* p = "abcdef";
+	char arr[] = "abcdef";
+	char* p = arr;
+
 	return 0;
 }
