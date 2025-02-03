@@ -689,10 +689,44 @@
 //	return 0;
 //}
 
-int main(void) {
-	//char* p = "abcdef";
-	char arr[] = "abcdef";
-	char* p = arr;
+//int main(void) {
+//	//char* p = "abcdef";
+//	char arr[] = "abcdef";
+//	char* p = arr;
+//
+//	return 0;
+//}
+////指针数组
+//int main(void) {
+//	//指针数组就是存放指针的数组，每个元素就是指针类型
+//	int a = 10;
+//	int b = 20;
+//	int c = 30;
+//	/*int* pa = &a;
+//	int* pb = &b;
+//	int* pc = &c;*/
+//	int* arr[3] = { &a, &b, &c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++) {
+//		printf("%d ", *(arr[i]));
+//	}
+//	return 0;
+//}
 
-	return 0;
-}
+////指针数组模拟二维数组
+//int main(void) {
+//	int arr1[5] = { 1, 2, 3, 4, 5 };
+//	int arr2[5] = { 6, 7, 8, 9, 10 };
+//	int arr3[5] = { 11, 12, 13, 14, 15 };
+//	int* arr[] = { arr1, arr2, arr3 };
+//	int i = 0;
+//	for (i = 0; i < 3; i++) {
+//		int j = 0;
+//		for (j = 0; j < 5; j++) {
+//			printf("%d ", arr[i][j]);//*(*(arr+i)+j)
+//		}
+//		printf("\n");
+//	
+//	}
+//	return 0;
+//}
