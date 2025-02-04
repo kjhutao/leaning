@@ -730,3 +730,28 @@
 //	}
 //	return 0;
 //}
+
+//int main(void) {
+//	char* p = "abcdef";
+//	//*p指向的是常量字符串，不能通过*p修改字符串
+//	printf("%c\n", *p);
+//	printf("%s\n", p);//使用%s打印字符串，只需要传入字符串的首地址
+//
+//	//char ch = 'w';
+//	//	char ch1 = 'c';
+//	//	//char const* pc = &ch;
+//	//	char * const pc = &ch;
+//	//	*pc = 'b';
+//	//	pc = &ch1;
+//	//
+//	//	printf("%c\n", *pc);
+//
+//	return 0;
+//}
+
+int main(void) {
+	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int (*p)[10] = &arr;//p就是数组指针，指向一个含有10个元素的数组
+
+	return 0;
+}
