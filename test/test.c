@@ -749,9 +749,40 @@
 //	return 0;
 //}
 
+//int main(void) {
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int (*p)[10] = &arr;//p就是数组指针，指向一个含有10个元素的数组
+//
+//	return 0;
+//}
+
+//int main(void) {
+//
+//	int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//	int (*p)[10] = &arr;//取出的是数组的地址
+//
+//	//想使用p这个数组指针访问arr数组的元素
+//	int i = 0;
+//	for (i = 0; i < 10; i++) {
+//		printf("%d ", (*p)[i]);
+//	}
+//	return 0;
+//}
+void print(int arr[3][5], int a, int b) {
+	int i = 0;
+	for (i = 0; i < a; i++) {
+		int j = 0;
+		for (j = 0; j < b; j++) {
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}
+
 int main(void) {
-	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int (*p)[10] = &arr;//p就是数组指针，指向一个含有10个元素的数组
+
+	int arr[3][5] = { {1, 2, 3, 4, 5}, {2, 5, 6, 7, 8}, {6, 9, 10, 11, 12} };
+	print(arr, 3, 5);//将arr数组的内容打印出来
 
 	return 0;
 }
