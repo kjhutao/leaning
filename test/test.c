@@ -768,21 +768,66 @@
 //	}
 //	return 0;
 //}
-void print(int arr[3][5], int a, int b) {
-	int i = 0;
-	for (i = 0; i < a; i++) {
-		int j = 0;
-		for (j = 0; j < b; j++) {
-			printf("%d ", arr[i][j]);
-		}
-		printf("\n");
-	}
-}
+//void print(int arr[3][5], int a, int b) {
+//	int i = 0;
+//	for (i = 0; i < a; i++) {
+//		int j = 0;
+//		for (j = 0; j < b; j++) {
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main(void) {
+//
+//	int arr[3][5] = { {1, 2, 3, 4, 5}, {2, 5, 6, 7, 8}, {6, 9, 10, 11, 12} };
+//	print(arr, 3, 5);//将arr数组的内容打印出来
+//
+//	return 0;
+//}
+
+////函数指针变量
+//int add(int x, int y) {
+//	return x + y;
+//}
+//
+//int main(void) {
+//	//int a = 10;
+//	//int* pa = &a;
+//
+//	//int arr[5] = { 0 };
+//	//int(*parr)[5] = &arr;//parr是一个指针，指向一个含有5个元素的数组
+//
+//	printf("%p\n", &add);
+//	printf("%p\n", add);//函数名就是函数的地址
+//	int (*pf)(int, int) = &add;//pf是一个函数指针变量，指向一个函数
+//	//int (*)(int, int) 函数指针类型
+//	//pf是一个函数指针变量，指向一个返回值为int，参数为int，int的函数
+//	//pf = add;//错误写法
+//	int ret = (*pf)(2, 3);//int ret = pf (2, 3);这样写也可以
+//	printf("%d\n", ret);
+//
+//	return 0;
+//}
+//int main(void) {
+//	//(*(void(*)())0)();//函数指针
+//	//调用地址为0的函数
+//	//调用0地址处放的那个函数，函数是没有参数的，返回值是void
+//	void(*signal(int, void(*)(int)))(int);//signal是一个函数，返回值是一个函数指针
+//	//signal函数的参数是一个整型和一个函数指针，返回值是一个函数指针
+//	//上面只是一次函数声明，没有函数定义
+//	//void(*)(int)
+//	//函数指针类型，参数是int，返回值是void
+//	return 0;	
+//}
+
+typedef unsigned int uint;
+//类型重定义
 
 int main(void) {
-
-	int arr[3][5] = { {1, 2, 3, 4, 5}, {2, 5, 6, 7, 8}, {6, 9, 10, 11, 12} };
-	print(arr, 3, 5);//将arr数组的内容打印出来
+	unsigned int a = 10;
+	uint b = 20;
 
 	return 0;
 }
