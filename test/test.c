@@ -822,12 +822,30 @@
 //	return 0;	
 //}
 
-typedef unsigned int uint;
-//类型重定义
+//typedef unsigned int uint;
+////类型重定义
+//
+//int main(void) {
+//	unsigned int a = 10;
+//	uint b = 20;
+//
+//	return 0;
+//}
 
 int main(void) {
-	unsigned int a = 10;
-	uint b = 20;
-
+	int ch;
+	FILE* fp;//文件指针
+	char fname[50];//文件名
+	printf("请输入文件名：");
+	scanf_s("%s", fname, 50);
+	fp = fopen(fname, "r");//打开文件
+	if (fp == NULL) {
+		printf("打开文件失败\n");
+		exit(1);
+	}
+	while ((ch = fgetc(fp)) != EOF) {//读取文件
+		putchar(ch);//输出文件内容
+	}
+	fclose(fp);//关闭文件
 	return 0;
 }
