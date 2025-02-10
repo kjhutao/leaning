@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\leaning\\test\\",
+  "WorkspaceRootPath": "E:\\leaning\\test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF3560A2-DED8-4DBF-8997-011E8DED4831}|test.vcxproj|D:\\leaning\\test\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{EF3560A2-DED8-4DBF-8997-011E8DED4831}|test.vcxproj|E:\\leaning\\test\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EF3560A2-DED8-4DBF-8997-011E8DED4831}|test.vcxproj|solutionrelative:test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "test.c",
-              "DocumentMoniker": "D:\\leaning\\test\\test.c",
+              "DocumentMoniker": "E:\\leaning\\test\\test.c",
               "RelativeDocumentMoniker": "test.c",
-              "ToolTip": "D:\\leaning\\test\\test.c",
+              "ToolTip": "E:\\leaning\\test\\test.c",
               "RelativeToolTip": "test.c",
-              "ViewState": "AgIAAEEDAAAAAAAAAAAAAE4DAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAFYDAAAAAAAAAAAqwGsDAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-01-08T05:56:42.731Z",
               "EditorCaption": ""

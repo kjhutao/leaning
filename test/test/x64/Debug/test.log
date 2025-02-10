@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\leaning\test\test.c(844,3): warning C4013: “exit”未定义；假设外部返回 int
-  test.vcxproj -> D:\leaning\test\x64\Debug\test.exe
+  test.vcxproj -> E:\leaning\test\x64\Debug\test.exe
