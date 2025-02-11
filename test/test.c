@@ -880,14 +880,95 @@
 //
 //	return 0;
 //}
+int Add(int x, int y) {
+	return x + y;
+}
+	
+int Sub(int x, int y) {
+	return x - y;
+}
+int Mul(int x, int y) {
+	return x * y;
+}
+int Div(int x, int y) {
+	return x / y;
+}
+
+void menu() {
+	printf("********************************\n");
+	printf("******** 1. add  2. sub ********\n");
+	printf("******** 3. mul  4. div ********\n");
+	printf("******** 0. exit        ********\n");
+	printf("********************************\n");
+}
 
 //移除表
 //完成整数的加法/减法/乘法/除法
 int main(void) {
-	printf("********************************\n");
-	printf("******** 1. add  2. sub ********\n");
-	printf("******** 3. mul  4. div ********\n");
-	printf("********************************\n");
+
+	int choice = 0;
+	int a = 0;
+	int b = 0;
+	int ret = 0;
+	int(*pfArr[5])(int, int) = { 0, Add, Sub, Mul, Div };
+	menu();
+	printf("请选择：");
+	scanf_s("%d", &choice);
+	if (choice >= 0 && choice <= 4) {
+		printf("请输入两个操作数：");
+		scanf_s("%d %d", &a, &b);
+		ret = pfArr[choice](a, b);
+		printf("%d\n", ret);		
+	}
+	else if (choice == 0) {
+		printf("退出\n");
+	}
+	else
+	{
+		printf("选择错误，请重新选择\n");
+		return 0;
+	}
+	
+	
+
+	/*do {
+		menu();
+		printf("请选择：");		
+		scanf_s("%d", &choice);
+		switch (choice)
+		{
+		case 1:
+			printf("请输入两个操作数：");
+			scanf("%d %d", &a, &b);
+			ret = Add(a, b);
+			printf("%d\n", ret);
+			break;
+		case 2:
+			printf("请输入两个操作数：");
+			scanf("%d %d", &a, &b);
+			ret = Sub(a, b);
+			printf("%d\n", ret);
+			break;
+		case 3:
+			printf("请输入两个操作数：");
+			scanf("%d %d", &a, &b);
+			ret = Mul(a, b);
+			printf("%d\n", ret);
+			break;
+		case 4:
+			printf("请输入两个操作数：");
+			scanf("%d %d", &a, &b);
+			ret = Div(a, b);
+			printf("%d\n", ret);
+			break;
+		case 0:
+			printf("退出\n");
+			break;
+		default:
+			printf("选择错误,请重新选择\n");	
+			break;
+		}
+	} while (choice);*/
 
 	return 0;
 }
