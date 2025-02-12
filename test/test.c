@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
+//#include<stdio.h>
+//#include<string.h>
 
 //int Fact(int n) {
 //	if (n == 0) {
@@ -880,95 +881,169 @@
 //
 //	return 0;
 //}
-int Add(int x, int y) {
-	return x + y;
-}
-	
-int Sub(int x, int y) {
-	return x - y;
-}
-int Mul(int x, int y) {
-	return x * y;
-}
-int Div(int x, int y) {
-	return x / y;
+//int Add(int x, int y) {
+//	return x + y;
+//}
+//	
+//int Sub(int x, int y) {
+//	return x - y;
+//}
+//int Mul(int x, int y) {
+//	return x * y;
+//}
+//int Div(int x, int y) {
+//	return x / y;
+//}
+//
+//void menu() {
+//	printf("********************************\n");
+//	printf("******** 1. add  2. sub ********\n");
+//	printf("******** 3. mul  4. div ********\n");
+//	printf("******** 0. exit        ********\n");
+//	printf("********************************\n");
+//}
+//
+////移除表
+////完成整数的加法/减法/乘法/除法
+//int main(void) {
+//
+//	int choice = 0;
+//	int a = 0;
+//	int b = 0;
+//	int ret = 0;
+//	int(*pfArr[5])(int, int) = { 0, Add, Sub, Mul, Div };
+//	menu();
+//	printf("请选择：");
+//	scanf_s("%d", &choice);
+//	if (choice >= 0 && choice <= 4) {
+//		printf("请输入两个操作数：");
+//		scanf_s("%d %d", &a, &b);
+//		ret = pfArr[choice](a, b);
+//		printf("%d\n", ret);		
+//	}
+//	else if (choice == 0) {
+//		printf("退出\n");
+//	}
+//	else
+//	{
+//		printf("选择错误，请重新选择\n");
+//		return 0;
+//	}
+//	
+//	
+//
+//	/*do {
+//		menu();
+//		printf("请选择：");		
+//		scanf_s("%d", &choice);
+//		switch (choice)
+//		{
+//		case 1:
+//			printf("请输入两个操作数：");
+//			scanf("%d %d", &a, &b);
+//			ret = Add(a, b);
+//			printf("%d\n", ret);
+//			break;
+//		case 2:
+//			printf("请输入两个操作数：");
+//			scanf("%d %d", &a, &b);
+//			ret = Sub(a, b);
+//			printf("%d\n", ret);
+//			break;
+//		case 3:
+//			printf("请输入两个操作数：");
+//			scanf("%d %d", &a, &b);
+//			ret = Mul(a, b);
+//			printf("%d\n", ret);
+//			break;
+//		case 4:
+//			printf("请输入两个操作数：");
+//			scanf("%d %d", &a, &b);
+//			ret = Div(a, b);
+//			printf("%d\n", ret);
+//			break;
+//		case 0:
+//			printf("退出\n");
+//			break;
+//		default:
+//			printf("选择错误,请重新选择\n");	
+//			break;
+//		}
+//	} while (choice);*/
+//
+//	return 0;
+//}
+
+//
+
+
+//void qsort(void* base, //指向待排序数组的指针//base是数组首元素的地址
+//	size_t num,		   //数组中元素的个数
+//	size_t width,	   //每个元素的大小
+//	int (*cmp)(const void* e1, const void* e2)//函数指针，比较函数
+//);
+//测试qsort来排序整型数组
+
+//int cmp_int(const void* p1, const void* p2) {
+//	return (*(int*)p1 - *(int*)p2);
+//}
+
+//void test1() {
+//	int arr[] = { 9, 5, 2, 7, 6, 8, 1, 3, 4, 0 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), cmp_int);
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//}
+
+//测试qsort函数排序结构体数组
+//int cmp_str(const void* p1, const void* p2) {
+//	return strcmp(((struct Stu*)p1)->name,((struct Stu*)p2)->name );
+//}
+//
+//struct Stu {
+//	char name[20];
+//	int age;
+//};
+//
+//void test2() {
+//	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wangwu", 10} };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), cmp_str);//cmp_str是自定义的比较函数
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%s ", arr[i].name);
+//	}
+//	printf("\n");
+//}
+//
+//int main(void) {
+//
+//	test1();
+//	return 0;
+//}
+#include<stdio.h>
+#include<string.h>
+
+struct Stu {
+	char name[20];
+	int age;
+};
+
+int  cmp_stu_name(const void* p1, const void* p2) {
+	return (((struct Stu*)p1)->name,((struct Stu*)p2)->name);
 }
 
-void menu() {
-	printf("********************************\n");
-	printf("******** 1. add  2. sub ********\n");
-	printf("******** 3. mul  4. div ********\n");
-	printf("******** 0. exit        ********\n");
-	printf("********************************\n");
-}
-
-//移除表
-//完成整数的加法/减法/乘法/除法
 int main(void) {
-
-	int choice = 0;
-	int a = 0;
-	int b = 0;
-	int ret = 0;
-	int(*pfArr[5])(int, int) = { 0, Add, Sub, Mul, Div };
-	menu();
-	printf("请选择：");
-	scanf_s("%d", &choice);
-	if (choice >= 0 && choice <= 4) {
-		printf("请输入两个操作数：");
-		scanf_s("%d %d", &a, &b);
-		ret = pfArr[choice](a, b);
-		printf("%d\n", ret);		
+	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wanwu", 10} };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	qsort(arr, sz, sizeof(arr[0]), cmp_stu_name);
+	int i = 0;
+	for (i = 0; i < sz; i++) {
+		printf("%s ", arr[i].name);
 	}
-	else if (choice == 0) {
-		printf("退出\n");
-	}
-	else
-	{
-		printf("选择错误，请重新选择\n");
-		return 0;
-	}
-	
-	
-
-	/*do {
-		menu();
-		printf("请选择：");		
-		scanf_s("%d", &choice);
-		switch (choice)
-		{
-		case 1:
-			printf("请输入两个操作数：");
-			scanf("%d %d", &a, &b);
-			ret = Add(a, b);
-			printf("%d\n", ret);
-			break;
-		case 2:
-			printf("请输入两个操作数：");
-			scanf("%d %d", &a, &b);
-			ret = Sub(a, b);
-			printf("%d\n", ret);
-			break;
-		case 3:
-			printf("请输入两个操作数：");
-			scanf("%d %d", &a, &b);
-			ret = Mul(a, b);
-			printf("%d\n", ret);
-			break;
-		case 4:
-			printf("请输入两个操作数：");
-			scanf("%d %d", &a, &b);
-			ret = Div(a, b);
-			printf("%d\n", ret);
-			break;
-		case 0:
-			printf("退出\n");
-			break;
-		default:
-			printf("选择错误,请重新选择\n");	
-			break;
-		}
-	} while (choice);*/
-
 	return 0;
 }

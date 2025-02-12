@@ -1,2 +1,4 @@
 ﻿  test.c
+E:\leaning\test\test.c(1037,2): warning C4047: “return”:“int”与“char *”的间接级别不同
+E:\leaning\test\test.c(1043,2): warning C4013: “qsort”未定义；假设外部返回 int
   test.vcxproj -> E:\leaning\test\x64\Debug\test.exe
