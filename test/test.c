@@ -1025,25 +1025,123 @@
 //	test1();
 //	return 0;
 //}
-#include<stdio.h>
-#include<string.h>
+//#include<stdio.h>
+//#include<string.h>
+//
+//struct Stu {
+//	char name[20];
+//	int age;
+//};
+//
+//int  cmp_stu_name(const void* p1, const void* p2) {
+//	return strcmp(((struct Stu*)p1)->name, ((struct Stu*)p2)->name);
+//}
+//
+//int main(void) {
+//	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wanwu", 10} };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), cmp_stu_name);
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%s ", arr[i].name);
+//	}
+//	return 0;
+//}
+//struct Stu {
+//	char name[20];
+//	int age;
+//};
+//
+//int cmp_str(const void* p1, const void* p2) {
+//	return strcmp(((const struct Stu*)p1)->name, ((const struct Stu*)p2)->name);
+//}
+//void test2() {
+//	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wangwu", 10} };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), cmp_str);//cmp_str是自定义的比较函数
+//	int i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%s ", arr[i].name);
+//	}
+//	printf("\n");
+//}
+//
+//int main(void) {
+//	test2();
+//
+//	return 0;
+//}
 
-struct Stu {
-	char name[20];
-	int age;
-};
+//#include<stdio.h>
+//#include<string.h>
+//#include<stdlib.h>
+//
+//struct Stu {
+//	char name[20];
+//	int age;
+//};
+//
+//static void Swap(char* buf1, char* buf2, size_t width) {
+//	size_t i = 0;
+//	char tmp = 0;
+//	for (i = 0; i < width; i++) {
+//		tmp = *buf1;
+//		*buf1 = *buf2;
+//		*buf2 = tmp;
+//
+//		buf1++;
+//		buf2++;
+//	}
+//}
+//
+//static int cmp_int(const void* p1, const void* p2) {
+//	return (int)(*(int*)p1 - *(int*)p2);
+//}
+//
+//static int cmp_str(const void* p1, const void* p2) {
+//	return strcmp(((struct Stu*)p1)->name, ((struct Stu*)p2)->name);
+//}
+//
+//static void bubble_sort(void* base, size_t sz, size_t width, int (*cmp)(const void*  p1, const void* p2)) {
+//	size_t i = 0;
+//	for (i = 0; i < sz - 1; i++) {
+//		size_t j = 0;
+//		for (j = 0; j < sz - i - 1; j++) {
+//			if (cmp((char*)base + j * width , (char*)base + (j + 1) * width) > 0) {
+//				Swap((char*)base + j * width, (char*)base + (j + 1) * width, width);
+//			}
+//		}
+//	}
+//}
+//
+//static void print(int arr[], size_t sz) {
+//	size_t i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//}
+//
+//static void test4() {
+//	int arr[] = { 9, 5, 2, 7, 6, 8, 1, 3, 4, 0 };
+//	size_t sz = sizeof(arr) / sizeof(arr[0]);
+//	bubble_sort(arr, sz, sizeof(arr[0]), cmp_int);
+//	print(arr, sz);
+//}
+//
+//static void test5() {
+//	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wangwu", 10} };
+//	size_t sz = sizeof(arr) / sizeof(arr[0]);
+//	bubble_sort(arr, sz, sizeof(arr[0]), cmp_str);
+//	size_t i = 0;
+//	for (i = 0; i < sz; i++) {
+//		printf("%s ", arr[i].name);
+//	}
+//	printf("\n");
+//}
+//
+//int main(void) {
+//	test4();
+//	test5();
+//	return 0;
+//}
 
-int  cmp_stu_name(const void* p1, const void* p2) {
-	return (((struct Stu*)p1)->name,((struct Stu*)p2)->name);
-}
-
-int main(void) {
-	struct Stu arr[3] = { {"zhangsan", 20}, {"lisi", 30}, {"wanwu", 10} };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	qsort(arr, sz, sizeof(arr[0]), cmp_stu_name);
-	int i = 0;
-	for (i = 0; i < sz; i++) {
-		printf("%s ", arr[i].name);
-	}
-	return 0;
-}
