@@ -1145,3 +1145,26 @@
 //	return 0;
 //}
 
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(void) {
+
+	int a = 10;
+	printf("%zd\n", sizeof(int));
+	printf("%zd\n", sizeof(a));
+
+	int arr[10] = { 0 };
+	printf("%zd\n", sizeof(arr));
+	printf("%zd\n", sizeof(arr[0]));//sizeof是一个操作符，不是函数
+	//strlen是一个函数，不是操作符，用来求字符串的长度
+	//strlen只能求字符串的长度，不能求数组的长度
+	char arr1[] = { 'a', 'b', 'c' };
+	char arr2[] = "abc";
+	printf("%zd\n", strlen(arr1));//这里strlen返回的是一个随机值
+	printf("%zd\n", strlen(arr2));//strlen必须遇到'\0'才会停止计数
+
+	return 0;
+}
