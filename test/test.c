@@ -1150,21 +1150,46 @@
 #include<stdlib.h>
 #include<string.h>
 
-int main(void) {
+//int main(void) {
+//
+//	int a = 10;
+//	printf("%zd\n", sizeof(int));
+//	printf("%zd\n", sizeof(a));
+//
+//	int arr[10] = { 0 };
+//	printf("%zd\n", sizeof(arr));
+//	printf("%zd\n", sizeof(arr[0]));//sizeof是一个操作符，不是函数
+//	//strlen是一个函数，不是操作符，用来求字符串的长度
+//	//strlen只能求字符串的长度，不能求数组的长度
+//	char arr1[] = { 'a', 'b', 'c' };
+//	char arr2[] = "abc";
+//	printf("%zd\n", strlen(arr1));//这里strlen返回的是一个随机值
+//	printf("%zd\n", strlen(arr2));//strlen必须遇到'\0'才会停止计数
+//
+//	return 0;
+//}
+//数组名是数组首元素的地址
+//但是有2个列外：
+//1.sizeof(数组名)
+//2.&数组名
 
-	int a = 10;
-	printf("%zd\n", sizeof(int));
-	printf("%zd\n", sizeof(a));
-
-	int arr[10] = { 0 };
-	printf("%zd\n", sizeof(arr));
-	printf("%zd\n", sizeof(arr[0]));//sizeof是一个操作符，不是函数
-	//strlen是一个函数，不是操作符，用来求字符串的长度
-	//strlen只能求字符串的长度，不能求数组的长度
-	char arr1[] = { 'a', 'b', 'c' };
-	char arr2[] = "abc";
-	printf("%zd\n", strlen(arr1));//这里strlen返回的是一个随机值
-	printf("%zd\n", strlen(arr2));//strlen必须遇到'\0'才会停止计数
-
-	return 0;
-}
+//int main(void) {
+//	int a[] = { 1, 2, 3, 4 };//16
+//	//a是数组名，数组名表示首元素的地址
+//	printf("%zd\n", sizeof(a));//16
+//	printf("%zd\n", sizeof(a + 0));//4/8
+//	printf("%zd\n", sizeof(*a));//4
+//	//*a--*(a+0)--a[0]
+//	printf("%zd\n", sizeof(a + 1));//4/8
+//	printf("%zd\n", sizeof(a[1]));//4
+//	printf("%zd\n", sizeof(&a));//4/8
+//	printf("%zd\n", sizeof(*&a));//16
+//	//1.*&a--*(&a)--a
+//	//2.&a--a的地址,类型是int(*)[4] *&a是一个指针，指向一个含有4个元素的数组
+//	printf("%zd\n", sizeof(&a + 1));//4/8
+//	printf("%zd\n", sizeof(&a[0])); //4/8
+//	printf("%zd\n", sizeof(&a[0] + 1));//4/8
+//	//*a == a[0]
+//	
+//	return 0;
+//}
