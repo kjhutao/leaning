@@ -1194,11 +1194,37 @@
 //	return 0;
 //}
 
+//int main(void) {
+//	int aa[2][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int* ptr1 = (int*)(&aa + 1);
+//	int* ptr2 = (int*)(*(aa + 1));
+//    printf("%d, %d", *(ptr1 - 1), *(ptr2 - 1));
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	char arr[] = "abcdef";
+//	printf("%zd\n", sizeof(arr));
+//	printf("%zd\n", sizeof(arr + 0));
+//	printf("%zd\n", sizeof(*arr));
+//	printf("%zd\n", sizeof(arr[1]));
+//	printf("%zd\n", sizeof(&arr));//&arr是数组的地址，是地址大小就是4/8
+//	printf("%zd\n", sizeof(&arr + 1));//&arr + 1跳过了整个数组，指向数组后面的那个位置
+//	printf("%zd\n", sizeof(&arr[0] + 1));
+//	return 0;
+//}
+
 int main(void) {
-	int aa[2][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int* ptr1 = (int*)(&aa + 1);
-	int* ptr2 = (int*)(*(aa + 1));
-    printf("%d, %d", *(ptr1 - 1), *(ptr2 - 1));
+	char arr[] = "abcdef";
+	printf("%d\n", strlen(arr));//6
+	printf("%d\n", strlen(arr + 0));//6
+	//printf("%d\n", strlen(*arr));//崩溃
+	//printf("%d\n", strlen(arr[1]));//崩溃
+	printf("%d\n", strlen(&arr));//6--&arr是数组的地址.
+	printf("%d\n", strlen(&arr + 1));//随机值
+	printf("%d\n", strlen(&arr[0] + 1));//5
+	
 
 	return 0;
 }
