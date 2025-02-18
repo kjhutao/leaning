@@ -1215,16 +1215,47 @@
 //	return 0;
 //}
 
+//int main(void) {
+//	char arr[] = "abcdef";
+//	printf("%d\n", strlen(arr));//6
+//	printf("%d\n", strlen(arr + 0));//6
+//	//printf("%d\n", strlen(*arr));//崩溃
+//	//printf("%d\n", strlen(arr[1]));//崩溃
+//	printf("%d\n", strlen(&arr));//6--&arr是数组的地址.
+//	printf("%d\n", strlen(&arr + 1));//随机值
+//	printf("%d\n", strlen(&arr[0] + 1));//5
+//	
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	char* p = "abcdef";
+//	printf("%d\n", strlen(p));//6
+//	printf("%d\n", strlen(p + 1));//5
+//	printf("%d\n", strlen(*p));//崩溃
+//	printf("%d\n", strlen(p[0]));//崩溃
+//	printf("%d\n", strlen(&p));//随机值
+//	printf("%d\n", strlen(&p + 1));//随机值
+//	printf("%d\n", strlen(&p[0] + 1));//5
+//
+//	return 0;
+//}
+
 int main(void) {
-	char arr[] = "abcdef";
-	printf("%d\n", strlen(arr));//6
-	printf("%d\n", strlen(arr + 0));//6
-	//printf("%d\n", strlen(*arr));//崩溃
-	//printf("%d\n", strlen(arr[1]));//崩溃
-	printf("%d\n", strlen(&arr));//6--&arr是数组的地址.
-	printf("%d\n", strlen(&arr + 1));//随机值
-	printf("%d\n", strlen(&arr[0] + 1));//5
-	
+	int a[3][4] = { 0 };
+	printf("%zd\n", sizeof(a));//48
+	printf("%zd\n", sizeof(a[0][0]));//4
+	printf("%zd\n", sizeof(a[0]));//a[0]是第一行的数组名，单独放在sizeof内部,计算的是第一行数组的大小 4 * 4 = 16
+	printf("%zd\n", sizeof(a[0] + 1));//a[0]没有单独放在sizeof内部。4
+	printf("%zd\n", sizeof(*(a[0] + 1)));//是第一行第二个元素，大小是4个字节
+	printf("%zd\n", sizeof(a + 1));//a + 1是
+	printf("%zd\n", sizeof(*(a + 1)));
+	printf("%zd\n", sizeof(&a[0] + 1));
+	printf("%zd\n", sizeof(*( & a[0] + 1)));
+	printf("%zd\n", sizeof(*(a)));
+	printf("%zd\n", sizeof(a[3]));
+	printf("%zd\n", sizeof(&a));
 
 	return 0;
 }
