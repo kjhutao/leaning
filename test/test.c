@@ -1241,21 +1241,82 @@
 //
 //	return 0;
 //}
+//
+
+//int main(void) {
+//	int a[3][4] = { 0 };
+//	printf("%zd\n", sizeof(a));//48
+//	printf("%zd\n", sizeof(a[0][0]));//4
+//	printf("%zd\n", sizeof(a[0]));//a[0]是第一行的数组名，单独放在sizeof内部,计算的是第一行数组的大小 4 * 4 = 16
+//	printf("%zd\n", sizeof(a[0] + 1));//a[0]没有单独放在sizeof内部。4
+//	printf("%zd\n", sizeof(*(a[0] + 1)));//是第一行第二个元素，大小是4个字节
+//	printf("%zd\n", sizeof(a + 1));//a + 1是第二行的地址，大小是4/8
+//	printf("%zd\n", sizeof(*(a + 1)));//*(a + 1)是第二行的数组名，单独放在sizeof内部，计算的是第二行数组的大小 4 * 4 = 16
+//	printf("%zd\n", sizeof(&a[0] + 1));//&a[0]是第一行的地址，+1是第二行的地址，大小是4/8
+//	printf("%zd\n", sizeof(*(&a[0] + 1)));//*( & a[0] + 1)是第二行的数组名，单独放在sizeof内部，计算的是第二行数组的大小 4 * 4 = 16
+//	printf("%zd\n", sizeof(*(a)));//*(a)是第一行的数组名，单独放在sizeof内部，计算的是第一行数组的大小 4 * 4 = 16
+//	printf("%zd\n", sizeof(a[3])); //4
+//	printf("%zd\n", sizeof(&a));//4/8
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	short s = 8;
+//	int n = 12;
+//	printf("%zd\n", sizeof(s = n + 5));
+//	printf("%d\n", s);
+//
+//
+//	return 0;
+//}
+
+//int main(void) {
+//	int a[5] = { 1, 2, 3, 4, 5 };
+//	int* ptr = (int*)(&a + 1);
+//	printf("%d, %d", *(a + 1), *(ptr - 1));
+//
+//	return 0;
+//}
+
+//struct Test {
+//	int Num;
+//	char* pcName;
+//	short sDate;
+//	char cha[2];
+//	short sBa[4];
+//} *p = (struct Test*)0x100000;
+//
+//int main(void) {
+//
+//	printf("%p\n", p + 0x1);//跳过一个结构体的大小
+//	//0x100020 -- 0x100014
+//	printf("%p\n", (unsigned long)p + 0x1);//0x100001
+//	printf("%p\n", (unsigned int)p + 0x1);//0x100001
+//	return 0;
+//}
+
+//int main(void) {
+//	//int a[3][2] = { (0, 1), (2, 3), (4, 5) };//逗号表达式
+//	////int a[3][2] = { 1, 3, 5 };//错误
+//	//int* p;
+//	//p = a[0];
+//	//printf("%d\n", p[0]);
+//	////p[0] == *(p + 0) == *(a[0] + 0) == a[0][0]
+//
+//	int a[5][5];
+//	int(*p)[4];
+//	p = a;
+//	printf("%p,%d\n", &p[4][2] - &a[4][2], &p[4][2] - &a[4][2]);
+//	return 0;
+//}
 
 int main(void) {
-	int a[3][4] = { 0 };
-	printf("%zd\n", sizeof(a));//48
-	printf("%zd\n", sizeof(a[0][0]));//4
-	printf("%zd\n", sizeof(a[0]));//a[0]是第一行的数组名，单独放在sizeof内部,计算的是第一行数组的大小 4 * 4 = 16
-	printf("%zd\n", sizeof(a[0] + 1));//a[0]没有单独放在sizeof内部。4
-	printf("%zd\n", sizeof(*(a[0] + 1)));//是第一行第二个元素，大小是4个字节
-	printf("%zd\n", sizeof(a + 1));//a + 1是
-	printf("%zd\n", sizeof(*(a + 1)));
-	printf("%zd\n", sizeof(&a[0] + 1));
-	printf("%zd\n", sizeof(*( & a[0] + 1)));
-	printf("%zd\n", sizeof(*(a)));
-	printf("%zd\n", sizeof(a[3]));
-	printf("%zd\n", sizeof(&a));
+
+	int aa[2][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	int* ptr1 = (&aa + 1);
+	int* ptr2 = (int*)(*(aa + 1));
+	printf("%d, %d", *(ptr1 - 1), *(ptr2 - 1));
 
 	return 0;
 }
