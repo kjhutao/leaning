@@ -1311,12 +1311,128 @@
 //	return 0;
 //}
 
+//int main(void) {
+//
+//	int aa[2][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int* ptr1 = (&aa + 1);
+//	int* ptr2 = (int*)(*(aa + 1));
+//	printf("%d, %d", *(ptr1 - 1), *(ptr2 - 1));
+//
+//	return 0;
+//}
+////写一个扫雷游戏
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//#include <stdbool.h>
+//
+//#define SIZE 10
+//#define MINES 10
+//
+//char board[SIZE][SIZE];//存放雷区的数据
+//char displayBoard[SIZE][SIZE];//存放显示给玩家的数据
+//bool gameOver = false;//游戏是否结束
+//
+//void initializeBoard() {
+//    for (int i = 0; i < SIZE; i++) {
+//        for (int j = 0; j < SIZE; j++) {
+//            board[i][j] = '0';
+//            displayBoard[i][j] = '*';
+//        }
+//    }
+//}
+//
+//void placeMines() {
+//    srand((unsigned int)time(NULL));
+//    int minesPlaced = 0;
+//    while (minesPlaced < MINES) {
+//        int x = rand() % SIZE;
+//        int y = rand() % SIZE;
+//        if (board[x][y] != 'M') {
+//            board[x][y] = 'M';
+//            minesPlaced++;
+//        }
+//    }
+//}
+//
+//void calculateNumbers() {
+//    int dx[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+//    int dy[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+//    for (int i = 0; i < SIZE; i++) {
+//        for (int j = 0; j < SIZE; j++) {
+//            if (board[i][j] == 'M') continue;
+//            int count = 0;
+//            for (int k = 0; k < 8; k++) {
+//                int ni = i + dx[k];
+//                int nj = j + dy[k];
+//                if (ni >= 0 && ni < SIZE && nj >= 0 && nj < SIZE && board[ni][nj] == 'M') {
+//                    count++;
+//                }
+//            }
+//            board[i][j] = count + '0';
+//        }
+//    }
+//}
+//
+//void printBoard(char b[SIZE][SIZE]) {
+//    for (int i = 0; i < SIZE; i++) {
+//        for (int j = 0; j < SIZE; j++) {
+//            printf("%c ", b[i][j]);
+//        }
+//        printf("\n");
+//    }
+//}
+//
+//void reveal(int x, int y) {
+//    if (x < 0 || x >= SIZE || y < 0 || y >= SIZE || displayBoard[x][y] != '*') return;
+//    displayBoard[x][y] = board[x][y];
+//    if (board[x][y] == '0') {
+//        int dx[] = {-1, -1, -1, 0, 0, 1, 1, 1};
+//        int dy[] = {-1, 0, 1, -1, 1, -1, 0, 1};
+//        for (int k = 0; k < 8; k++) {
+//            reveal(x + dx[k], y + dy[k]);
+//        }
+//    }
+//}
+//
+//void playerMove() {
+//    int x, y;
+//    printf("请输入坐标 (x y): ");
+//    scanf_s("%d %d", &x, &y);
+//    if (x < 0 || x >= SIZE || y < 0 || y >= SIZE) {
+//        printf("输入错误，请重新输入。\n");
+//        playerMove();
+//    } else if (board[x][y] == 'M') {
+//        gameOver = true;
+//        printf("你踩到了地雷，游戏结束！\n");
+//    } else {
+//        reveal(x, y);
+//    }
+//}
+//
+//int main(void) {
+//    
+//    initializeBoard();
+//    placeMines();
+//    calculateNumbers();
+//    while (!gameOver) {
+//        printBoard(displayBoard);
+//        playerMove();
+//    }
+//    printf("最终的雷区布局：\n");
+//    printBoard(board);
+//    return 0;
+//}
+
 int main(void) {
 
-	int aa[2][5] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-	int* ptr1 = (&aa + 1);
-	int* ptr2 = (int*)(*(aa + 1));
-	printf("%d, %d", *(ptr1 - 1), *(ptr2 - 1));
+	char* c[] = { "ENTER", "NEW", "POINT", "FIRST" };
+	char** cp[] = { c + 3, c + 2, c + 1, c };
+	char*** cpp = cp;
+	printf("%s\n", **++cpp);//point
+	printf("%s\n", *-- * ++cpp + 3);//er
+	printf("%s\n", *cpp[-2] + 3);//st
+	printf("%s\n", cpp[-1][-1] + 1);//ew
 
 	return 0;
 }

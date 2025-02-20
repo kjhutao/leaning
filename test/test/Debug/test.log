@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\leaning\test\test.c(1317,7): warning C4047: “初始化”:“int *”与“int (*)[2][5]”的间接级别不同
-  test.vcxproj -> D:\leaning\test\Debug\test.exe
+  test.vcxproj -> E:\leaning\test\Debug\test.exe
