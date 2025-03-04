@@ -1148,7 +1148,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-#include<string.h>
+
 
 //int main(void) {
 //
@@ -1424,15 +1424,116 @@
 //    return 0;
 //}
 
-int main(void) {
+//int main(void) {
+//
+//	char* c[] = { "ENTER", "NEW", "POINT", "FIRST" };
+//	char** cp[] = { c + 3, c + 2, c + 1, c };
+//	char*** cpp = cp;
+//	printf("%s\n", **++cpp);//point
+//	printf("%s\n", *-- * ++cpp + 3);//er
+//	printf("%s\n", *cpp[-2] + 3);//st
+//	printf("%s\n", cpp[-1][-1] + 1);//ew
+//
+//	return 0;
+//}
 
-	char* c[] = { "ENTER", "NEW", "POINT", "FIRST" };
-	char** cp[] = { c + 3, c + 2, c + 1, c };
-	char*** cpp = cp;
-	printf("%s\n", **++cpp);//point
-	printf("%s\n", *-- * ++cpp + 3);//er
-	printf("%s\n", *cpp[-2] + 3);//st
-	printf("%s\n", cpp[-1][-1] + 1);//ew
+//int main(void) {
+//
+//	int a = 20;
+//	int b = 30;
+//	const int* p = &a;
+//	int* const p1 = &b;
+//
+//	p = &b;
+//	*p = 40;//错误,不能通过*p修改*p指向的值,因为p是一个指向常量的指针
+//
+//	p1 = &a;//错误，p1是一个常量指针，不能修改指针的指向
+//	*p1 = 50;
+//
+//	return 0;
+//}
 
-	return 0;
-}
+//int main(void) {
+//	char arr1[] = "abcdef";
+//	char arr2[] = { 0 };
+//
+//	strcpy(arr2, arr1);
+//	printf("%s\n", arr2);
+//	return 0;
+//}
+
+
+//int strcmp_p(char* a, char* b)
+//{
+//    while (*a != '\0' && *b != '\0')
+//    {
+//        if (*a == *b)
+//        {
+//            a++;
+//            b++;
+//            continue;
+//        }
+//        break;
+//    }
+//    return (*a - *b);
+//}
+//
+//int main(int argc, char* argv[])
+//{
+//    char a1[20] = { "abc" };
+//    char b2[20] = { "weefsd" };
+//    
+//    printf("%d\n", strcmp_p(a1, a1));
+//    return 0;
+//}
+
+//char* my_strcat(char* dest, const char* source) {
+//    // 找到目标字符串的末尾
+//    char* dest_end = dest + strlen(dest);
+//    // 将源字符串的字符复制到目标字符串末尾
+//    while (*source) {
+//        *dest_end++ = *source++;
+//    }
+//    // 添加 null 字符，确保字符串以 null 字符结束
+//    *dest_end = '\0';
+//    // 返回指向目标字符串的指针
+//    return dest;
+//}
+//char* my_strcat(char* dest, const char* source) {
+//	// 检查目标字符串是否为空，如果为空，直接返回源字符串
+//	if (!dest) {
+//		return source;
+//	}	
+//	// 找到目标字符串的末尾
+//	char* dest_end = dest + strlen(dest);
+//	// 将源字符串的字符复制到目标字符串末尾
+//
+//	if (!(*dest - *source)) {//处理二个字符串相同的情况，或者二个字符串的长度相同
+//		int len = strlen(dest)*2 + 1;
+//		int len_end = strlen(dest);
+//		//拼接字符串
+//		while (len_end--) {
+//			*dest_end++ = *source++;
+//		}
+//		*(dest + len) = '\0';
+//		return dest;
+//	}		
+//	// 将源字符串的字符复制到目标字符串末尾
+//	while (*source) {
+//		*dest_end++ = *source++;
+//	}
+//	// 添加 null 字符，确保字符串以 null 字符结束
+//	*dest_end = '\0';
+//	// 返回指向目标字符串的指针
+//	return dest;
+//}
+//
+//int main() {
+//    char dest[20] = "hello";
+//    char source[] = ",world";
+//    // 使用模拟的 my_strcat 拼接字符串
+//    my_strcat(dest, source);
+//    printf("Concatenated string: %s\n", dest);
+//    return 0;
+//}
+
